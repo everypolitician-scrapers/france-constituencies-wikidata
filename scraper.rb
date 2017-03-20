@@ -9,7 +9,7 @@ require 'wikidata/area'
 
 query = <<-EOQ
   SELECT DISTINCT ?item WHERE {
-    ?item wdt:P31 wd:Q15620943 .
+    ?item wdt:P31/wdt:P279* wd:Q15620943 .
     SERVICE wikibase:label { bd:serviceParam wikibase:language "fr" . }
   }
   ORDER BY ?itemLabel
